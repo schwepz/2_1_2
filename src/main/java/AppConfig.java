@@ -4,8 +4,8 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
-    //commit
     @Bean(name="helloworld")
+    @Scope("prototype")
     public HelloWorld getHelloWorld() {
         HelloWorld helloWorld = new HelloWorld();
         helloWorld.setMessage("Hello World!");
